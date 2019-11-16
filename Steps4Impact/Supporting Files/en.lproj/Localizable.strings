@@ -94,6 +94,10 @@
 "Challenge.CreateTeam.formTitle" = "Your Team Name";
 "Challenge.CreateTeam.formPlaceholder" = "My Awesome Team";
 "Challenge.CreateTeam.errorTitle" = "Error";
+"Challenge.CreateTeam.teamPhotoText" = "Upload a team photo";
+"Challenge.CreateTeam.teamVisibilityText" = "Team Visibility";
+"Challenge.CreateTeam.visibilityBodyOn" = "Your team is discoverable.\nAny participant can find and join your team";
+"Challenge.CreateTeam.visibilityBodyOff" = "Your team is not discoverable.";
 "Challenge.CreateTeam.errorBody" = "Could not create team - perhaps try a different name";
 "Challenge.CreateTeam.successTitle" = "Your team has been created!";
 "Challenge.CreateTeam.continue" = "Continue";
