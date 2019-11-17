@@ -43,6 +43,7 @@ enum AKFCausesEndPoint {
   case sources
   case commitment
   case commitments(id: Int) // swiftlint:disable:this identifier_name
+  case achievement
 }
 
 extension AKFCausesEndPoint {
@@ -74,6 +75,8 @@ extension AKFCausesEndPoint {
       return "/commitments"
     case .commitments(let cid):
       return "/commitments/\(cid)"
+    case .achievement:
+      return "/achievement"
     }
   }
 }
@@ -137,6 +140,10 @@ class AKFCausesService: Service {
 
   static func getTeam(team: Int, completion: ServiceRequestCompletion? = nil) {
     shared.request(endpoint: .team(teamId: team), completion: completion)
+  }
+
+  static func getAchievement(completion: ServiceRequestCompletion? = nil) {
+    shared.request(endpoint: .achievement, completion: completion)
   }
 
   static func joinTeam(fbid: String, team: Int,

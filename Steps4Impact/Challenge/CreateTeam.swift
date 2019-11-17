@@ -76,7 +76,7 @@ class CreateTeamViewController: ViewController, UINavigationControllerDelegate, 
     imgButton.setImage(Assets.onboardingLoginPeople.image, for: .normal)
     imgButton.addTarget(self, action: #selector(imgButtonTapped), for: .touchUpInside)
     privateSwitch.isOn = true
-    
+
     textField.delegate = self
     textField.placeholder = Strings.Challenge.CreateTeam.formPlaceholder
     textField.addTarget(self, action: #selector(teamNameChanged(_:)), for: .editingChanged)
@@ -193,7 +193,7 @@ class CreateTeamViewController: ViewController, UINavigationControllerDelegate, 
   func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
       dismiss(animated: true, completion: nil)
   }
-  
+
   // swiftlint:disable:next colon
   func imagePickerController(_ picker: UIImagePickerController,
                              didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
