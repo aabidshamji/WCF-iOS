@@ -30,7 +30,7 @@
 import UIKit
 import NotificationCenter
 
-class CreateTeamViewController: ViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class CreateTeamViewController: ViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate { // swiftlint:disable:this line_length
   private let label = UILabel(typography: .title)
   private let textField = UITextField(.bodyRegular)
   private let teamPhotoTextField = UILabel(typography: .title)
@@ -46,7 +46,7 @@ class CreateTeamViewController: ViewController, UINavigationControllerDelegate, 
 
   private var event: Event?
 
-  override func configureView() {
+  override func configureView() { // swiftlint:disable:this function_body_length
     super.configureView()
     title = Strings.Challenge.CreateTeam.title
     navigationItem.leftBarButtonItem = UIBarButtonItem(
@@ -115,7 +115,7 @@ class CreateTeamViewController: ViewController, UINavigationControllerDelegate, 
     stackView.axis  = NSLayoutConstraint.Axis.horizontal
     stackView.distribution  = UIStackView.Distribution.fillProportionally
     stackView.alignment = UIStackView.Alignment.center
-    stackView.spacing   = 16.0
+    stackView.spacing = 16.0
 
     stackView.addArrangedSubview(teamVisibilityTextField)
     stackView.addArrangedSubview(privateSwitch)
@@ -143,7 +143,7 @@ class CreateTeamViewController: ViewController, UINavigationControllerDelegate, 
           return
         }
 
-        AKFCausesService.getEvent(event: event.id!) { (result) in
+        AKFCausesService.getEvent(event: event.id ?? 0) { (result) in
           self.event = Event(json: result.response)
         }
       }
